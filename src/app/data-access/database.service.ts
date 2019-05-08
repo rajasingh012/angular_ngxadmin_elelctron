@@ -11,12 +11,12 @@ export class DatabaseService {
 
     constructor() {
         this.options = {
-            type: 'mariadb',
+            type: 'postgres',
             host: 'localhost',
-            port: 3306,
-            username: 'root',
-            password: 'some_pass',
-            database: 'some_db',
+            port: 5432,
+            username: 'postgres',
+            password: 'postgres',
+            database: 'rajasingh',
             entities: [
                 Person,
                 User

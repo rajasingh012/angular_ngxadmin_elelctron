@@ -1,22 +1,21 @@
-import { Component } from '@angular/core';
-import { DatabaseService } from './data-access/database.service';
-import { Person } from './data-access/entities/person';
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+import { Component, OnInit } from '@angular/core';
+import { AnalyticsService } from './@core/utils/analytics.service';
 
 @Component({
-    selector: 'rp-app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+  selector: 'ngx-app',
+  template: '<router-outlet></router-outlet>',
 })
-export class AppComponent {
-    title = 'Loan App';
+export class AppComponent implements OnInit {
 
-    constructor(private databaseService: DatabaseService) {
-        this.databaseService.connection.then(
-            connection =>
-                connection.manager.find(Person).then(
-                    persons => console.log(persons)
-                )
-        );
-    }
+  constructor(private analytics: AnalyticsService) {
+  }
 
+  ngOnInit(): void {
+    this.analytics.trackPageViews();
+  }
 }

@@ -3,16 +3,24 @@
   "compilerOptions": {
     "outDir": "../out-tsc/app",
     "module": "es2015",
-    "types": ["node"],
+    "baseUrl": "./",
     "paths": {
-      "typeorm": ["../node_modules/typeorm/typeorm-model-shim.js"]
+      "@angular/*": [
+        "../node_modules/@angular/*"
+      ],
+      "@nebular/*": [
+        "../node_modules/@nebular/*"
+      ]
     }
   },
   "exclude": [
-    "src/test.ts",
+    "test.ts",
     "**/*.spec.ts",
-    "dist",
-    "app-builds",
-    "node_modules"
+    "../node_modules/@nebular/**/*.spec.ts"
+  ],
+  "include": [
+    "../src/*.ts",
+    "../src/**/*.ts",
+    "../node_modules/@nebular/**/*.ts"
   ]
 }
