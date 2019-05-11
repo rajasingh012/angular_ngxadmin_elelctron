@@ -5,7 +5,11 @@
   <a href="http://typeorm.io/">
     <img style="display: inline-block" src="https://github.com/typeorm/typeorm/raw/master/resources/logo_big.png" width="292" height="128">
   </a>
-  <br>
+  
+  <a href="https://github.com/akveo/ngx-admin">
+    <img style="display: inline-block" src="https://camo.githubusercontent.com/e402f9afc6f7f979bc709b76777545592a75e3b9/68747470733a2f2f692e696d6775722e636f6d2f4f494c377274382e706e67" width="292" height="128">
+  </a>
+    <br>
 </div>
 
 [![Electron Logo](https://electronjs.org/images/electron-logo.svg)](https://electronjs.org) 
@@ -30,7 +34,8 @@ Currently runs with:
 - Electron
 - Electron Builder
 - TypeORM
-- Mysql2
+- Postgres
+- Ngx-admin
 
 (for versions, please check `package.json` file)
 
